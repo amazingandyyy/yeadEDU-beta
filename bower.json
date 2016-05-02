@@ -1,0 +1,26 @@
+{
+  "name": "ng-express",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Andy Chen <amazingandyyy@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "ngSweetAlert": "angular-sweetalert#^1.1.0",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.1",
+    "semantic": "semantic-ui#^2.1.8",
+    "animate.css": "^3.5.1"
+  }
+}
