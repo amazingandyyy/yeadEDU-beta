@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('yeahEduApp', ['ui.router', 'oitozero.ngSweetAlert']);
+var app = angular.module('yeahEduApp', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
