@@ -40,8 +40,8 @@ app.controller('indexCtrl', function($scope, $state, $timeout) {
 app.controller('homeCtrl', function($scope, $state) {
     console.log('homeCtrl loaded!');
 });
-app.controller('homeSectionTitleCtrl', function($scope, $state, $timeout) {
-    console.log('homeSectionTitleCtrl loaded!');
+app.controller('homeSectionCtrl', function($scope, $state, $timeout) {
+    console.log('homeSectionCtrl loaded!');
     $('.intro_section .ui.progress').visibility({
         onTopVisible: function(calculations) {
             $(this).progress();
@@ -55,12 +55,12 @@ app.controller('homeSectionTitleCtrl', function($scope, $state, $timeout) {
             $(document).bind("kendo:skinChange", createChart);
         }
     });
-    $('.intro_sectionChart table').visibility({
-        onTopVisible: function(calculations) {
-            console.log(calculations);
-            $(this).css('transform', 'scale(2.3) rotate(12deg) translateY(30px)');
-        }
-    });
+    // $('.intro_sectionChart table').visibility({
+    //     onTopVisible: function(calculations) {
+    //         console.log(calculations);
+    //         $(this).css('transform', 'scale(2.3) rotate(12deg) translateY(30px)');
+    //     }
+    // });
 
     function createChart() {
         var data = [{
@@ -115,13 +115,13 @@ app.controller('jumbotronTitleCtrl', function($scope, $state, $interval, $timeou
     console.log('jumbotronTitleCtrl loaded!');
     $('.ui.huge.header.title').addClass('animated flipInX');
 
-    $scope.titleSolgan = '我们从Berkeley走出来，要带更多人进';
+    $scope.titleSolgan = '我们从Berkeley走出来，要带更多人走进';
     var titleSolgans = ['绝不花俏，保证专业', '靠实力转学，是我们的哲学', '提早准备是致胜关键', '我们一定要全力以赴', '我们从Cal走出来，要带更多人go bear'];
     var index = 0;
     $('.ui.large.header.titleSolgan').addClass('animated fadeIn');
-    $timeout(function() {
-        $('.ui.large.header.titleSolgan').addClass('animated fadeOut');
-    }, 3000);
+    // $timeout(function() {
+    //     $('.ui.large.header.titleSolgan').addClass('animated fadeOut');
+    // }, 3000);
     // if($location.$$path === '/'){
     $interval(readTitleSlogan, 5000, 50);
     // }else{
@@ -129,17 +129,17 @@ app.controller('jumbotronTitleCtrl', function($scope, $state, $interval, $timeou
     // }
 
     function readTitleSlogan() {
-        $('.ui.large.header.titleSolgan').removeClass('animated fadeIn fadeOut');
-        $timeout(function() {
-            $('.ui.large.header.titleSolgan').addClass('animated fadeIn');
-        }, 0);
-        // console.log(index % 5);
-        $scope.titleSolgan = titleSolgans[index % 5];
-        $timeout(function() {
-            $('.ui.large.header.titleSolgan').addClass('animated fadeOut');
-        }, 4000);
-        index++;
-        console.log('index: ', index);
+        // $('.ui.large.header.titleSolgan').removeClass('animated fadeIn fadeOut');
+        // $timeout(function() {
+        //     $('.ui.large.header.titleSolgan').addClass('animated fadeIn');
+        // }, 0);
+        // // console.log(index % 5);
+        // $scope.titleSolgan = titleSolgans[index % 5];
+        // $timeout(function() {
+        //     $('.ui.large.header.titleSolgan').addClass('animated fadeOut');
+        // }, 4000);
+        // index++;
+        // console.log('index: ', index);
 
     }
 });
